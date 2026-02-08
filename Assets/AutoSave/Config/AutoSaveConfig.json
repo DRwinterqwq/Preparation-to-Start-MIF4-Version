@@ -1,0 +1,12 @@
+{
+    "enabled": true,
+    "saveIntervalMinutes": 10.0,
+    "showNotifications": true,
+    "saveWhenEnteringPlayMode": true,
+    "saveOnSceneChange": true,
+    "saveScenes": true,
+    "saveAssets": true,
+    "createBackup": false,
+    "excludedAssets": [],
+    "debugMode": false
+}

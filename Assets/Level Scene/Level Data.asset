@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eeae46dfa7cb784e8f4caf828b6f773, type: 3}
+  m_Name: Level Data
+  m_EditorClassIdentifier: 
+  levelTitle: "\u51C6\u5907\u51FA\u53D1\uFF01"
+  soundTrack: {fileID: 8300000, guid: abaa60bd879c54e43a7173b9f1057531, type: 3}
+  speed: 15
+  timeScale: 1
+  MaxDiamondCount: 0
+  useMusicTime: 1
+  levelTime: 0
+  gravity: {x: 0, y: -9.3, z: 0}
+  colors:
+  - material: {fileID: 2100000, guid: 4a9a05847c8609548b12b570d0f8317f, type: 2}
+    color: {r: 1, g: 0, b: 0, a: 1}

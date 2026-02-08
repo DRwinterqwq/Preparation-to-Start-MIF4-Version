@@ -132,7 +132,16 @@ namespace DancingLineFanmade.Level
                 case DieReason.Hit:
                     GameState = GameStatus.Died;
                     AudioManager.PlayClip(Resources.Load<AudioClip>("Audios/Hit"), 1f);
-                    dieCubes = Object.Instantiate(cubes, player.transform.position, player.transform.rotation);
+ if (cubes != null && player != null) 
+{
+    dieCubes = Object.Instantiate(cubes, player.transform.position, player.transform.rotation);
+} 
+else 
+{
+    // 在控制台打印具体的错误原因
+    if (cubes == null) Debug.LogError("【错误】cubes 预制体为空！请检查 Player 脚本或 LevelManager 的赋值。");
+    if (player == null) Debug.LogError("【错误】player 对象为空！");
+}
                     dieCubes?.GetComponent<PlayerCubes>().Play(collision);
                     break;
                 case DieReason.Drowned:

@@ -70,7 +70,7 @@ namespace DancingLineFanmade.Level
 
         [HideInInspector] public Transform henshinObject;
         [HideInInspector] public Vector3 objectOffset;
-        [HideInInspector] public bool showLineTail, showLineBody;
+  public bool showLineTail, showLineBody;
         [HideInInspector] public bool henShin = false;
         [HideInInspector] public float rotationTime;
         private bool didCreateTail = false;

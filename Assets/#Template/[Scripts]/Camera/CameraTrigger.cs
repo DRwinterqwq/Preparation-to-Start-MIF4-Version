@@ -16,6 +16,8 @@ namespace DancingLineFanmade.Trigger
         [SerializeField] private Vector3 scale = Vector3.one;
         [SerializeField, Range(0f, 179f)] private float fieldOfView = 60f;
         [SerializeField] private bool follow = true;
+        [SerializeField] private bool smooth = true;
+        [SerializeField] private Vector3 speed = new Vector3(1.2f, 3f, 6f);
         [SerializeField, MinValue(0f)] private float duration = 2f;
         [SerializeField] private Ease ease = Ease.InOutSine;
         [SerializeField] private RotateMode mode = RotateMode.FastBeyond360;
@@ -31,6 +33,7 @@ namespace DancingLineFanmade.Trigger
             if (other.CompareTag("Player") && canBeTriggered)
             {
                 follower.follow = follow;
+                follower.smooth = smooth;
                 follower.Trigger(offset, rotation, scale, fieldOfView, duration, ease, mode, onFinished, false, null);
             }
         }
@@ -40,6 +43,7 @@ namespace DancingLineFanmade.Trigger
             if (!canBeTriggered)
             {
                 follower.follow = follow;
+                follower.smooth = smooth;
                 follower.Trigger(offset, rotation, scale, fieldOfView, duration, ease, mode, onFinished, false, null);
             }
         }
